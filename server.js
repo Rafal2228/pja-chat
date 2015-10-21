@@ -3,6 +3,7 @@ var express = require('express');
 var http = require('http');
 var app = express();
 var server = http.createServer(app);
+var port = process.env.PORT || 5000
 
 // app config
 app.set('views', __dirname + '/public');
@@ -13,8 +14,8 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
-server.listen(80);
-console.log('Starting server at port: 80')
+server.listen(port);
+console.log('Starting server at port: ' + port)
 
 
 var wss = new WebSocketServer({server: server, path: '/api'});
