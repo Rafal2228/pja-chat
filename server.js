@@ -13,8 +13,8 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
-server.listen(8000);
-console.log('Starting server at port: 8000')
+server.listen(80);
+console.log('Starting server at port: 80')
 
 
 var wss = new WebSocketServer({server: server, path: '/api'});
