@@ -3,7 +3,7 @@ var chatInput = document.getElementById('chatInput');
 var chatBtn = document.getElementById('chatBtn');
 
 var br = document.createElement('br');
-var ws = new WebSocket('ws://pja-chat.herokuapp.com/api');
+var ws = new WebSocket('wss://pja-chat.herokuapp.com/api');
 
 var chatter = {};
 
