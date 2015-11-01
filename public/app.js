@@ -1,9 +1,15 @@
 var chat = document.getElementsByClassName('chat')[0];
 var chatInput = document.getElementById('chatInput');
 var chatBtn = document.getElementById('chatBtn');
-
 var br = document.createElement('br');
-var ws = new WebSocket('wss://pja-chat.herokuapp.com/api');
+
+if (location.port) {
+  var endpoint = 'wss://' + window.location.hostname + ':' + location.port + '/api';
+} else {
+  var endpoint = 'wss://' + window.location.hostname + '/api';
+}
+
+var ws = new WebSocket(endpoint);
 
 var chatter = {};
 
