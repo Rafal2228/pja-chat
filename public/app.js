@@ -4,9 +4,9 @@ var chatBtn = document.getElementById('chatBtn');
 var br = document.createElement('br');
 
 if (location.port) {
-  var endpoint = 'wss://' + window.location.hostname + ':' + location.port + '/api';
+  var endpoint = 'ws://' + window.location.hostname + ':' + location.port + '/api';
 } else {
-  var endpoint = 'wss://' + window.location.hostname + '/api';
+  var endpoint = 'ws://' + window.location.hostname + '/api';
 }
 
 var ws = new WebSocket(endpoint);

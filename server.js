@@ -40,7 +40,7 @@ wss.on('connection', function(ws){
 
   ws.on('close', function(){
     console.log('disconnected');
-    allWs.splice(allWs.indexOf(ws, 1));
+    allWS.splice(allWS.indexOf(ws, 1));
     stdin.removeListener('data', callback);
   });
 });
